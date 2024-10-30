@@ -18,9 +18,8 @@ public class ue02_2 {
 
         double dist = Math.sqrt((x * x) + (y * y));
 
-        if (x <= radius && (y <= radius && dist > radius) && (x <= 0 && y <= 0)) {
+        if (x >= 0 && y >= 0 && dist >= radius && (y <= radius && x <= radius)) {
             System.out.println("Der Punkt liegt im Radius");
-
         } else {
             System.out.println("Der Punkt liegt außerhalb :(");
         }

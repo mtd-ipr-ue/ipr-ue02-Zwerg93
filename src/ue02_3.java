@@ -13,7 +13,7 @@ public class ue02_3 {
         System.out.print("Geben Sie die Monatszahl ein: ");
         int month = sc.nextInt();
 
-        switch (month){
+        switch (month) {
             case 1:
             case 3:
             case 5:
@@ -27,20 +27,18 @@ public class ue02_3 {
             case 6:
             case 9:
             case 11:
-               days = 30;
+                days = 30;
                 break;
             case 2:
-                days = 28;
+                if (month == 2) {
+                    if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
+                        days = 29;
+                    }
+                }
                 break;
             default:
                 System.out.printf("Invalid...Please Enter the 1 to 12...");
                 break;
-        }
-
-        if(month == 2) {
-            if( year % 4==0 && (year % 100 !=0 || year % 400 == 0)){
-                days = 29;
-            }
         }
 
         System.out.println(days);
